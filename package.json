@@ -5,7 +5,7 @@
   "description": "LeadFlow — production-grade Lead Management SaaS (Digital Heroes Full Stack Assessment, Task A)",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
     "format": "prettier --write .",

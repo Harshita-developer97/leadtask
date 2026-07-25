@@ -29,6 +29,7 @@ declare module '@auth/core/jwt' {
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  trustHost: true, // let Auth.js trust Vercel's forwarded host header
   // No database adapter: sessions are pure JWTs and the only provider is
   // Credentials, which Auth.js does not persist through an adapter anyway.
   // (Account/Session/VerificationToken tables still exist in the schema per

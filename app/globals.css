@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.5rem;
+
+  --background: 60 20% 98%;
+  --foreground: 240 15% 9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 240 15% 9%;
+
+  --primary: 240 15% 9%;
+  --primary-foreground: 60 20% 98%;
+
+  --secondary: 240 8% 94%;
+  --secondary-foreground: 240 15% 9%;
+
+  --muted: 240 8% 94%;
+  --muted-foreground: 240 5% 40%;
+
+  --accent: 27 65% 45%;
+  --accent-foreground: 60 20% 98%;
+
+  --destructive: 0 45% 48%;
+  --destructive-foreground: 60 20% 98%;
+
+  --border: 240 8% 88%;
+  --input: 240 8% 88%;
+  --ring: 27 65% 45%;
+}
+
+.dark {
+  --background: 240 15% 8%;
+  --foreground: 60 15% 95%;
+
+  --card: 240 13% 11%;
+  --card-foreground: 60 15% 95%;
+
+  --primary: 60 20% 98%;
+  --primary-foreground: 240 15% 9%;
+
+  --secondary: 240 10% 16%;
+  --secondary-foreground: 60 15% 95%;
+
+  --muted: 240 10% 16%;
+  --muted-foreground: 240 5% 65%;
+
+  --accent: 27 70% 55%;
+  --accent-foreground: 240 15% 9%;
+
+  --destructive: 0 55% 55%;
+  --destructive-foreground: 60 15% 95%;
+
+  --border: 240 10% 20%;
+  --input: 240 10% 20%;
+  --ring: 27 70% 55%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground font-body;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.focus-ring {
+  @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+}

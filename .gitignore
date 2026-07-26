@@ -10,3 +10,8 @@ test-results
 .DS_Store
 *.log
 .pnpm-store
+
+.vercel
+.env
+.env.local
+.env*.local
